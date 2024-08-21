@@ -16,24 +16,24 @@ apt upgrade -y
 apt install nala -y
 
 # Installing necessary programs
-nala install iwlwifi wget nano build-essential make gcc gdb cmake git xorg libx11-dev libxft-dev libxinerama-dev kitty rofi lxappearance thunar nitrogen picom -y
+nala install firmware-iwlwifi wget nano build-essential make gcc gdb cmake git xorg libx11-dev libxft-dev libxinerama-dev kitty rofi lxappearance thunar nitrogen picom -y
 
 # Installing Brave browser
-sudo nala install curl
-sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-sudo nala update
-sudo nala install brave-browser
+nala install curl -y
+curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|tee /etc/apt/sources.list.d/brave-browser-release.list
+nala update
+nala install brave-browser -y
 
 # VS Code
-sudo nala install wget gpg
+nala install wget gpg -y
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
-echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |tee /etc/apt/sources.list.d/vscode.list > /dev/null
 rm -f packages.microsoft.gpg
-sudo nala install apt-transport-https
-sudo nala update
-sudo nala install code
+nala install apt-transport-https
+nala update
+nala install code
 
 # DWM
 cd /home/$username
