@@ -66,7 +66,7 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function format          argument */
 	{ netspeed_rx, "%sB/s   ", "wlp0s20f3" },
-	{ run_command, "Vol: %4s | ", "wpctl get-volume @DEFAULT_SINK@ | awk '{print $2 * 100}'" },
+	{ run_command, "Vol: %s   ", "wpctl get-volume @DEFAULT_SINK@ | awk '{print $2 * 100}'" },
 	{ cpu_perc, "[CPU %s%%]   ", NULL	      },
 	{ ram_used, "[RAM %s]   ", NULL	      },
 	{ battery_perc, "[Bat1: %s%%]   ", "BAT1"},

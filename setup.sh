@@ -74,3 +74,8 @@ vscodeInstall
 
 # Copying .xinitrc
 cp .xinitrc ~/
+
+# Copying .bash_profile, so that startx is called automatically upon login
+cp .bash_profile ~/
+
+sudo reboot now

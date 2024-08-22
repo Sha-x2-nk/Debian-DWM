@@ -1,10 +1,12 @@
 #!/bin/bash
 
 touchpadConfigure() {
-    # !!Included this script in .xinitrc !!
 
     # Get the device ID of the touchpad by querying xinput
-    # sudo nala install xinput -y
+    sudo nala install xinput -y
+
+    # !!Included this script in .xinitrc !!
+
     # touchpad_id=$(xinput list | grep -i "Touchpad" | grep -oP 'id=\K[0-9]+')
     # # Check if the touchpad ID was found
     # if [ -n "$touchpad_id" ]; then
@@ -13,5 +15,4 @@ touchpadConfigure() {
     # else
     #     echo "Touchpad not found."
     # fi
-    echo "."
 }
