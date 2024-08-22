@@ -6,9 +6,9 @@ GTKThemeSetup() {
     cd themes-GTK/
     tar -xf Nordic-darker.tar.xz 
     sudo mv Nordic-darker /usr/share/themes/
-    rm -rf Nordic-darker-v40/
+    rm -rf Nordic-darker-v40 Nordic-darker
     cd ..
 
     mkdir -p ~/.config
-    mv .config/gtk-3.0 ~/.config/
+    cp -r .config/gtk-3.0 ~/.config/
 }

@@ -64,7 +64,8 @@ wallpaperSetup
 picomSetup
 # slstatus 
 slstatusSetup
-
+# kitty setup
+kittySetup
 
 # Installing browser
 braveInstall
