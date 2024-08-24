@@ -1,3 +1,4 @@
+#include <X11/XF86keysym.h>
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
@@ -63,9 +64,18 @@ static const char *termcmd[]  = { "st", NULL };
 /* custom commands */
 static const char *roficmd[] = { "rofi", "-show", "drun", "-show-emojis", NULL };
 static const char *kittytermcmd[] = { "kitty", NULL }; 
+static const char *brightnessup[] = { "brightnessctl", "set", "10%+", NULL };
+static const char *brightnessdown[] = { "brightnessctl", "set", "10%-", NULL };
+static const char *volumeup[] = { "wpctl", "set-volume", "@DEFAULT_SINK@", "10%+", NULL };
+static const char *volumedown[] = { "wpctl", "set-volume", "@DEFAULT_SINK@", "10%-", NULL };
+
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ 0,              XF86XK_MonBrightnessUp,  spawn,          {.v = brightnessup}},
+	{ 0,             XF86XK_MonBrightnessDown, spawn,          {.v = brightnessdown}},
+	{ 0,              XF86XK_AudioRaiseVolume, spawn,          {.v = volumeup}},
+	{ 0,              XF86XK_AudioLowerVolume, spawn,          {.v = volumedown}},
 	{ MODKEY,                       XK_p,      spawn,          {.v = roficmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = kittytermcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },

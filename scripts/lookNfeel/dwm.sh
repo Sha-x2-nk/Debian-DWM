@@ -1,6 +1,7 @@
 #!/bin/bash
 
 dwmSetup() {
+    rm -rf ~/.config/dwm
     mkdir -p ~/.config
     cp -r .config/dwm ~/.config/
 

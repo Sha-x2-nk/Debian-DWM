@@ -3,6 +3,7 @@
 kittySetup() {
     sudo nala install kitty -y
 
-    mkdir -p ~/.configx
+    rm -rf ~/.config/kitty
+    mkdir -p ~/.config
     cp -r .config/kitty ~/.config/
 }

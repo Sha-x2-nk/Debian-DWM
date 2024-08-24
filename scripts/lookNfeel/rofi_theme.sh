@@ -10,6 +10,7 @@ rofiSetup() {
     cd ../..
     rm -rf rofi-themes-collection/
 
+    rm -rf ~/.config/rofi
     mkdir -p ~/.config
     cp -r .config/rofi ~/.config
 }

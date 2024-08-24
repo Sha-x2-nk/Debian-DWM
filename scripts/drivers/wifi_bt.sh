@@ -5,4 +5,6 @@ WifiBtSetup() {
     sudo apt --purge autoremove bluez -y
     sudo nala install firmware-iwlwifi -y
     sudo modprobe -r iwlwifi ; sudo modprobe iwlwifi
+
+    sudo nala insall
 }

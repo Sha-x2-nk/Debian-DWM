@@ -1,6 +1,7 @@
 #!/bin/bash
 
 slstatusSetup() {
+    rm -rf ~/.config/slstatus
     mkdir -p ~/.config
     cp -r .config/slstatus ~/.config/
 
