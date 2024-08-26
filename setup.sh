@@ -51,7 +51,7 @@ sudo nala install thunar -y
 
 # dwm 
 dwmSetup
-# GTK theme
+# # GTK theme
 GTKThemeSetup
 # Rofi theme
 rofiSetup
@@ -65,7 +65,8 @@ slstatusSetup
 kittySetup
 
 # Installing browser
-braveInstall
+# braveInstall
+edgeInstall
 # Installing vscode
 vscodeInstall
 
