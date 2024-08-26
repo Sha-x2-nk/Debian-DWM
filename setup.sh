@@ -31,8 +31,6 @@ sudo apt upgrade -y
 # Install nala
 sudo apt install nala -y
 
-# Wifi & Bluetooth for Intel AX series interface
-WifiBtSetup
 # XORG display server and additional libraries required by dwm
 xorgSetup
 # Nvidia Graphic Drivers
@@ -44,7 +42,6 @@ audioSetup
 
 # Configure touchpad settings
 touchpadConfigure
-
 
 # Installing necessary development packages
 sudo nala install wget nano build-essential make gcc gdb cmake cmake-gui git -y
@@ -73,6 +70,9 @@ kittySetup
 edgeInstall
 # Installing vscode
 vscodeInstall
+
+# Wifi & Bluetooth for Intel AX series interface
+WifiBtSetup
 
 # Copying .xinitrc
 rm -f ~/.xinitrc
