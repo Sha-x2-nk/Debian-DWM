@@ -16,8 +16,10 @@ source scripts/lookNfeel/picom.sh
 source scripts/lookNfeel/rofi_theme.sh
 source scripts/lookNfeel/slstatus.sh
 source scripts/lookNfeel/wallpaper.sh
+source scripts/lookNfeel/nerd_fonts.sh
 
 source scripts/softwares/brave.sh
+source scripts/softwares/edge.sh
 source scripts/softwares/vscode.sh
 
 # Adding non-free and contrib repos to apt sources
@@ -59,6 +61,8 @@ rofiSetup
 wallpaperSetup
 # Picom (compositor)
 picomSetup
+# Nerd Fonts
+nerdFontsSetup
 # slstatus 
 slstatusSetup
 # kitty setup
